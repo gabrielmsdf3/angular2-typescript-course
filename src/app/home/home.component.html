@@ -1,1 +1,19 @@
-<p>home works!</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Desconto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of produtos">
+      <th scope="row" >{{p.id}}</th>
+      <td>{{p.nome}}</td>
+      <td>{{p.preco}}</td>
+      <td>Excluir</td>
+    </tr>
+  </tbody>
+</table>

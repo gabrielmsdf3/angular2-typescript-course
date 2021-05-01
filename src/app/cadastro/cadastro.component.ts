@@ -17,7 +17,7 @@ export class CadastroComponent implements OnInit {
   endereco: [string, number] = ['Rua aprovado no hackaton, numero: ', 5]
   dia: DiasDaSemana = DiasDaSemana.sab
 
-  produto: Produto = new Produto('cadeira', 900)
+  produto: Produto = new Produto(1, 'cadeira', 900)
   constructor( 
     private route: ActivatedRoute,
     private router: Router
