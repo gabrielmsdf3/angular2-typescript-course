@@ -1,5 +1,5 @@
 
-<table class="table table-striped">
+<table class="table table-striped" *ngIf="carregarLoading; else carregando">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -17,3 +17,16 @@
     </tr>
   </tbody>
 </table>
+
+
+<ng-template #carregando >
+  <div id="preloader">
+    <div class="inner">
+       <div class="bolas">
+          <div></div>
+          <div></div>
+          <div></div>                    
+       </div>
+    </div>
+</div>
+</ng-template>
