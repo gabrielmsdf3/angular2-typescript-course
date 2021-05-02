@@ -5,15 +5,22 @@
       <th scope="col">#</th>
       <th scope="col">Nome</th>
       <th scope="col">Preço</th>
-      <th scope="col">Desconto</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Excluir</th>
+
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let p of produtos">
       <th scope="row" >{{p.id}}</th>
-      <td>{{p.nome}}</td>
-      <td>{{p.preco}}</td>
-      <td>Excluir</td>
+      <td>{{p.nome | uppercase | lowercase}}</td>
+      <td>{{p.preco | currency:'BRL'}}</td>
+      <td>
+        <button type="button" class="btn btn-warning" (click)="editar(p.id)">Editar</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="excluirItem(p.id)">Excluir</button>
+      </td>
     </tr>
   </tbody>
 </table>

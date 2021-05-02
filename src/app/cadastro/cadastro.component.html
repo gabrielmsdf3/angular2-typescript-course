@@ -1,3 +1,7 @@
-<p>cadastro works!</p>
-{{texto}} - {{valor}} - {{endereco}} - {{dia}}
-<p>{{produto.nome}} - {{produto.preco}}</p>
+<div>
+  <label for="none" class="form-label">Produto</label>
+  <input class="form-control" name="none" id="none" [(ngModel)]="produto.nome" />
+  <label for="preco" class="form-label">Preço</label>
+  <input class="form-control" name="preco" id="preco" [(ngModel)]="produto.preco" />
+  <button type="button" class="btn btn-success" (click)="adicionar()">{{textoBotao}}</button>
+</div>
